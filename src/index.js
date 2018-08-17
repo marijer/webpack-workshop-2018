@@ -1,10 +1,16 @@
 import nav from './nav';
-import {top, bottom} from './footer';
-import button from './button';
+import {footer} from './footer';
+import makeButton from './button';
+import image from './icon.jpg';
+
 import {makeColorStyle} from './button-styles';
  
+const button = makeButton('test');
+button.style = makeColorStyle('red')
+document.body.appendChild(button);
+
+
+document.body.appendChild(footer);
+
 console.log(nav());
-console.log(top);
-console.log(bottom);
-console.log(button('test'));
 console.log(makeColorStyle('mustard'))
